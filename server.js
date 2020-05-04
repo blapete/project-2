@@ -29,3 +29,10 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log('Server listening on: http://localhost:' + PORT);
     });
 })
+
+
+// 
+
+// Create database localSpot_db;
+
+// Use localSpot_db;
