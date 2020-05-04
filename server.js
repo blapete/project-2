@@ -19,7 +19,7 @@ app.set("view engine", "handlebars");
 
 
 app.get("*" , function(req, res) {
-    res.send("Hello PAUL");
+    res.render("index")
 })
 
 
