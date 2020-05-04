@@ -1,0 +1,80 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+    color: #cae0e8;
+    background: rgb(34,34,34);
+    background: linear-gradient(180deg, rgba(34,34,34,1) 15%, rgba(43,77,94,1) 52%, rgba(149,100,118,1) 100%);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+ 
+#logo {
+    height: 40px;
+}
+
+h1 {
+    color: #cae0e8;
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.nav-bar {
+    background-color: #222222;
+    padding: 10px 40px;
+    border-bottom: 4px solid #2b4d5e;
+    margin-bottom: 10px;
+}
+
+.spot-div {
+    background-color: #222222;
+    border-radius: 10px;
+    border: 2px solid #cae0e8;
+    margin-top: 15px;
+    height: 20%;
+    padding: 20px;
+}
+
+.place-holder-pic {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    background-color: #cae0e8;
+
+}
+
+.add-favorite {
+    font-family: 'Comfortaa', sans-serif;
+    color: #cae0e8;
+    background-color: #2b4d5e;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+}
+
+.delete-favorite {
+    font-family: 'Comfortaa', sans-serif;
+    color: #cae0e8;
+    background-color: #956476;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+}
+
+.div-desc {
+    text-align: center;
+}
+
+footer {
+    border-top: 4px solid #2b4d5e;
+    background-color: #222222;
+    padding: 10px 40px;
+    margin-top: 30px;
+}
