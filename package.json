@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/blapete/project-2/issues"
   },
-  "homepage": "https://github.com/blapete/project-2#readme"
+  "homepage": "https://github.com/blapete/project-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.7"
+  }
 }
