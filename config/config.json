@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "localSpot_db",
+    "database": "localspot_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false

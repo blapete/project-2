@@ -18,15 +18,32 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-app.get("*" , function(req, res) {
-    res.render("index")
-})
+// app.get("*", function (req, res) {
+//     res.render("index")
+// })
 
 
 
-db.sequelize.sync({ force: true }).then(function() {
-    app.listen(PORT, function() {
-    console.log('Server listening on: http://localhost:' + PORT);
+app.post("/admin/:name", (req, res) => {
+    console.log("attempting to create new location");
+    console.log(req.params.name);
+    var spotName = { spot_name: req.params.name }
+    db.Spot.create(spotName).then((data) => {
+        console.log("created new spot");
+        res.json(data);
+    });
+});
+
+
+
+
+
+
+
+
+db.sequelize.sync({ force: true }).then(function () {
+    app.listen(PORT, function () {
+        console.log('Server listening on: http://localhost:' + PORT);
     });
 })
 
