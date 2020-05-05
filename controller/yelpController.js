@@ -1,26 +1,25 @@
-let yelp = require("yelp-fusion");
-let Spot = require("spotcontroller.js");
+'use strict';
+const yelp = require('yelp-fusion');
+const apiKey = 'BrwCyJPcn_OKdtNSBEzRK7qQI3hL0_MjsR8IotcI1HXMuUbmSC7jHWBENuwNhfWeyaxVauSVFC15fqf3BmiWh5qDkAX5_9Rt5vPkQHVEgWI4CFooiEFJpKl7Ll6sXnYx';
 
-var db = require("../models");
+var yelpController = {
+    chicagoSearch: function (spotName) {
+        const searchRequest = {
+            term: `${spotName}`,
+            location: 'chicago, il'
+        };
+        const client = yelp.client(apiKey);
+        client.search(searchRequest).then(response => {
+            const firstResult = response.jsonBody.businesses[0];
+            const prettyJson = JSON.stringify(firstResult, null, 4);
+            console.log(prettyJson);
+            return prettyJson;
+        }).catch(e => {
+            console.log(e);
+            return e;
+        });
+    },
 
-module.exports = {
-    getInfoByName: function(req, res) {
-        // doo yelp fusion
-yelp.find(req.params.name).then(spotData => {
-    res.json(spotData)
-})
-        // res.json(spotData)
-    }
 }
 
-
-router.get("/", function (req, res) {
-    yelp.selectAll(function (data) {
-        let hbsObject = {
-            spot: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
-    });
-});
-
+module.exports = yelpController
