@@ -1,6 +1,7 @@
 var express = require('express');
 var exphbs = require("express-handlebars");
 // const bookController = require('./controller/bookController');
+const routes = require('./routes');
 
 const db = require('./models');
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+app.use(routes);
 
 app.get("*" , function(req, res) {
     res.render("index")
