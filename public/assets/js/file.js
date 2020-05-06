@@ -36,9 +36,5 @@ $(document).ready(function () {
                 res.json(dbSpot);
             });
 
-
-
-
-
-
         })
+    })

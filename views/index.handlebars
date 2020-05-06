@@ -5,32 +5,35 @@
         <h6><a href="/favorites">Favorite Spots</a></h6>
     </div>
     <div class="container">
+{{#each spots}}
         <div class="row">
             <div class="col s12 spot-div">
-                <h3>New Spots</h3>
-                <p class="div-desc">Check out a Local Spot</p>
-                <hr>
-                <div class="row">
-                    <div class="col s12 m3">
-                        <div class="place-holder-pic"></div>
-                        <!--CHANGE TO IMG TAG LATER WITH CLASS "yelp-pic".-->
-                    </div>
-                    <div class="col s12 m8">
-                        <h5 class="spot-name">Lorhdtdhthdtem Ipsum</h5>
-                        {{#each spots}}
-                        <h1>{{this.spot_name}}</h1>
-                         {{/each}}
-                        <p class="spot-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-                            voluptatem necessitatibus est beatae totam. Voluptatem in amet velit placeat facilis alias
-                            odio! Error dolores saepe voluptatum doloribus excepturi, similique blanditiis?</p>
-                        <p><span class="spot-address">123 N Street St.</span> || <span class="spot-type">Music
-                                Venue</span> || Yelp Rating: <span class="rating">4.5</span> Stars</p>
-                        <button class="add-favorite">add favorite</button>
-                    </div>
-                </div>
-                <hr>
+
+<h3>New Spots</h3>
+<p class="div-desc">Check out a Local Spot</p>
+<hr>
+<div class="row">
+    <div class="col s12 m3">
+        <div class="place-holder-pic"></div>
+        <!--CHANGE TO IMG TAG LATER WITH CLASS "yelp-pic".-->
+    </div>
+
+    <div class="col s12 m8">
+        <h5 class="spot-name">{{this}}</h5>
+        <p class="spot-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
+            voluptatem necessitatibus est beatae totam. Voluptatem in amet velit placeat facilis alias
+            odio! Error dolores saepe voluptatum doloribus excepturi, similique blanditiis?</p>
+        <p><span class="spot-address">123 N Street St.</span> || <span class="spot-type">Music
+                Venue</span> || Yelp Rating: <span class="rating">4.5</span> Stars</p>
+        <button class="add-favorite" data-id="">add favorite</button>
+</div>
+
+</div>
+<hr>
+
             </div>
         </div>
+        {{/each}}
 
 </main>
 <footer>
