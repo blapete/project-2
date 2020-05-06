@@ -4,7 +4,8 @@ module.exports = function (sequelize, DataTypes) {
         image: DataTypes.STRING,
         rating: DataTypes.INTEGER,
         alias: DataTypes.STRING,
-        address: DataTypes.STRING
+        address: DataTypes.STRING,
+        likes: DataTypes.INTEGER
     });
 
     return Spot;

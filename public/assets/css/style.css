@@ -103,3 +103,18 @@ footer {
   padding: 10px 40px;
   margin-top: 30px;
 }
+
+.icon-thumb {
+  position: relative;
+  float: right;
+  top: 15px;
+  right: 10px;
+}
+
+.thumb-color:hover {
+  color: #f6d743;
+}
+
+.likes-amount {
+  text-align: right;
+}
