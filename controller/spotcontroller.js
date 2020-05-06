@@ -7,13 +7,15 @@ console.log(db.Spot);
 orm = {
   getAllSpots: function () {
     return db.Spot.findAll().then(function (data) {
+      let newSearch = yelp.chicagoSearch(data[1].dataValues.spot_name);
+      // console.log(newSearch);
+
+      // for (let i = 0; i < data.length; i++) {
+      //   console.log((data[i].dataValues.id) + " " + data[i].dataValues.spot_name);
+      // }
+      console.log("working");
       return data
     });
-  },
-  deleteSpotByName: function (req, res) {
-    db.Spot.destroy({ where: { spot_name: req.params.name } }).then(function (dbResponse) {
-      res.send('successfully deleted: ' + req.params.name)
-    })
   },
 
 

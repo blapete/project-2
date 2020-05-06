@@ -19,15 +19,15 @@ router.route('/favorites')
         // var data = { info: [{ info: "this is the info" }] }
         // spotControl.getAllFaveSpots().then(data => {
         //     console.log(data)
-            res.render("favorites"
+        res.render("favorites"
             // , { spots: data }
-            );
+        );
         // })
     })
 
 // no routes are hit catchall
-router.use(function (req, res) {
-    res.render()
-})
+// router.use(function (req, res) {
+//     res.render()
+// })
 
 module.exports = router;
