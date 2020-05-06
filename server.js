@@ -53,7 +53,6 @@ db.sequelize.sync(/*{ force: true }*/).then(function () {
 })
 
 
-// 
 
 // Create database localSpot_db;
 
