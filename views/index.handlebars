@@ -17,9 +17,9 @@
                     </div>
                     <div class="col s12 m8">
                         <h5 class="spot-name">Lorem Ipsum</h5>
-                        {{!-- {{#every info}} --}}
-                        {{!-- <h1>{{this.info}}</h1> --}}
-                        {{!-- {{/every}} --}}
+                        {{#each spots}}
+                        <h1>{{this.spot_name}}</h1>
+                         {{/each}}
                         <p class="spot-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
                             voluptatem necessitatibus est beatae totam. Voluptatem in amet velit placeat facilis alias
                             odio! Error dolores saepe voluptatum doloribus excepturi, similique blanditiis?</p>
