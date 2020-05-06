@@ -9,7 +9,6 @@ router.route('/')
     .get(function (req, res) {
         var data = { info: [{ info: "this is the info" }] }
         spotControl.getAllSpots().then(data => {
-            console.log(data)
             res.render("index", { spots: data });
         })
 
@@ -17,8 +16,8 @@ router.route('/')
     })
 
 // no routes are hit catchall
-router.use(function (req, res) {
-    res.render()
-})
+// router.use(function (req, res) {
+//     res.render()
+// })
 
 module.exports = router;
