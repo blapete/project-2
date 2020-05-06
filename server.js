@@ -2,6 +2,7 @@ var express = require('express');
 var exphbs = require("express-handlebars");
 // const bookController = require('./controller/bookController');
 const routes = require('./routes');
+const path = require('path');
 
 const db = require('./models');
 
@@ -10,6 +11,8 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 app.use(express.static("public"))
+app.use(express.static(path.resolve('./public')));
+app.use('/public', express.static(path.resolve('./public')))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

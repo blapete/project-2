@@ -12,6 +12,14 @@ body {
     flex: 1 0 auto;
   }
  
+a {
+    color: #cae0e8;
+}
+a:hover, a:active {
+    color: #2b4d5e;
+}
+
+
 #logo {
     height: 40px;
 }
@@ -50,7 +58,7 @@ h3 {
 
 }
 
-.add-favorite {
+.add-favorite, .add-favorite:visited {
     font-family: 'Comfortaa', sans-serif;
     color: #cae0e8;
     background-color: #2b4d5e;
@@ -59,13 +67,23 @@ h3 {
     padding: 10px;
 }
 
-.delete-favorite {
+.add-favorite:hover, .add-favorite:active {
+    background-color: #cae0e8;
+    color: #2b4d5e;
+}
+
+.delete-favorite, .delete-favorite:visited {
     font-family: 'Comfortaa', sans-serif;
     color: #cae0e8;
     background-color: #956476;
     border-radius: 4px;
     border: none;
     padding: 10px;
+}
+
+.delete-favorite:hover, .delete-favorite:hover {
+    background-color: #cae0e8;
+    color: #956476;
 }
 
 .div-desc {
