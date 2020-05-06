@@ -9,7 +9,7 @@ router.route('/')
     .get(function (req, res) {
         var data = { info: [{ info: "this is the info" }] }
         spotControl.getAllSpots().then(data => {
-            console.log(data)
+            // console.log(data)
             res.render("index", { spots: data });
         })
     })
@@ -18,7 +18,7 @@ router.route('/favorites')
     .get(function (req, res) {
         // var data = { info: [{ info: "this is the info" }] }
         // spotControl.getAllFaveSpots().then(data => {
-        //     console.log(data)
+        // console.log(data)
         res.render("favorites"
             // , { spots: data }
         );
