@@ -11,6 +11,7 @@ var yelpController = {
         const client = yelp.client(apiKey);
         client.search(searchRequest).then(response => {
             const firstResult = response.jsonBody.businesses[0];
+            console.log("Hi");
             const prettyJson = JSON.stringify(firstResult, null, 4);
             console.log(prettyJson);
             return prettyJson;
