@@ -48,21 +48,18 @@
  $(".thumb").on("click", function (event) {
         event.preventDefault();
         let id = $(this).data("id");
-        alert(id);
         let newLike = $(this).data("likes");
-        alert(newLike);
         let convert = parseInt(newLike);
         let newLikeInsert = convert + 1;
-        alert(newLikeInsert);
-         let newLikeAmount = {likes: newLikeInsert};
+        
+        let newLikeAmount ={likes: newLikeInsert}
 
         $.ajax("/api/likes/" + id, {
         type: "PUT",
-        data: newLikeInsert;
+        data: newLikeAmount,
         }).then(function() {
 
-        alert("it worked");
-         //location.reload();
+        location.reload()
         });
     });
 </script>
