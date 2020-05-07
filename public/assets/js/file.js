@@ -13,6 +13,7 @@ $(document).ready(function () {
         var ratingInput = $("#rating").val();
         var aliasInput = $("#alias").val();
         var addressInput = $("#address").val();
+        var likesInput = $("#likes").val();
         event.preventDefault();
         
         // Don't do anything if the name fields hasn't been filled out
@@ -26,7 +27,8 @@ $(document).ready(function () {
             image: imageInput,
             rating: ratingInput,
             alias: aliasInput,
-            address: addressInput
+            address: addressInput,
+            likes : likesInput
         });
     }
 

@@ -29,6 +29,11 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  font-size: 30px;
+  text-align: center;
+} 
+
 h3 {
   font-size: 30px;
   text-align: center;
@@ -54,6 +59,11 @@ h3 {
   -webkit-box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
   -moz-box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
   box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
+}
+
+.add-spot-div {
+  padding: 20px;
+  color: #cae0e8;
 }
 
 .place-holder-pic {
@@ -121,7 +131,8 @@ footer {
 }
 
 .thumb-color:hover {
-  color: #f6d743;
+  /* color: #f6d743; */
+  color: #2CBBAD;
 }
 
 .likes-amount {
@@ -139,6 +150,14 @@ footer {
 
 #spot-info {
   margin-top: 50%;
+}
+
+input {
+  color: #cae0e8;
+}
+
+#add-button {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 600px) {
