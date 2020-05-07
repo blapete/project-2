@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const spotControl = require('../controller/spotcontroller');
 const db = require("../models");
+const admin = require('../views/admin-routes/admin');
 
 
 router.get('/', function (req, res) {
@@ -11,7 +12,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/admin312', function (req, res) {
-    res.render("admin", { });
+    res.render("admin", {});
 });
 
 router.post('/api/admin312', function (req, res) {
