@@ -10,7 +10,12 @@ router.get('/', function (req, res) {
     });
 });
 
+router.get('/admin312', function (req, res) {
+    res.render("admin", { });
+});
+
 router.post('/api/admin312', function (req, res) {
+    console.log("hello");
     db.Spot.create(req.body).then(function (dbSpot) {
         res.json(dbSpot);
     });
