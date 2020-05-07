@@ -22,14 +22,10 @@ router.put("/api/likes/:id", function (req, res) {
     console.log(req.body.likes);
     db.Spot.update({
         likes: req.body.likes
-    }, { where: { id: req.params.id } }, function (result) {
-        if (result.changedRows == 0) {
-            return res.status(404).end();
-        } else {
-            console.log("Inserted");
-            res.status(200).end();
-        }
-    });
+    }, { where: { id: req.params.id } }).then(function (result) {
+        console.log(`This is the result: ${result}`);
+        res.json(result);
+    })
 });
 
 
