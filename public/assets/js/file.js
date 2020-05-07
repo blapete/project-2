@@ -6,11 +6,6 @@ $(document).ready(function () {
     var aliasInput = $("#alias");
     var addressInput = $("#address");
     $(document).on("submit", "#add-spot", handleSpotFormSubmit);
-
-
-
-
-
     
 
         function handleSpotFormSubmit(event) {
