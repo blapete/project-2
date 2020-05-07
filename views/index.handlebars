@@ -47,19 +47,22 @@
     $(".thumb").on("click", function (event) {
         event.preventDefault();
         let id = $(this).data("id");
+        var stored = localStorage.getItem('buttonid');
+        stored = (stored ? stored.split(',') : []);
+        stored.push(id);
+        localStorage.setItem('buttonid', stored.toString());
         let newLike = $(this).data("likes");
         let convert = parseInt(newLike);
         let newLikeInsert = convert + 1;
-
-        
-        let newLikeAmount ={likes: newLikeInsert}
-
+        let newLikeAmount = { likes: newLikeInsert }
         $.ajax("/api/likes/" + id, {
-        type: "PUT",
-        data: newLikeAmount,
-        }).then(function(data) {
-        location.reload();
+            type: "PUT",
+            data: newLikeAmount,
+        }).then(function (data) {
+            location.reload();
 
         });
+
     });
+
 </script>
