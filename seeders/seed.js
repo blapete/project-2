@@ -8,7 +8,8 @@ async function enterYelps(spot_name) {
             "image": results.image_url,
             "rating": results.rating,
             "alias": results.categories[0].title,
-            "address": results.location.address1
+            "address": results.location.address1,
+            "likes": 0
         }).then(function (dbResponse) {
             console.log(`insert of ${spot_name} has succeeded`);
             return true
