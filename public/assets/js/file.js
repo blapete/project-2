@@ -40,14 +40,4 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-})
+});

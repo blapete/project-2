@@ -17,19 +17,19 @@ router.post('/api/admin312', function (req, res) {
 });
 
 
-router.put("/api/cats/:id", function (req, res) {
-    var condition = "id = " + req.params.id;
+router.put("/api/likes/:id", function (req, res) {
     console.log(req.body);
-    // db.Spot.update({
-    //     likes: req.body
-    // }, condition, function (result) {
-    //     if (result.changedRows == 0) {
-    //         // If no rows were changed, then the ID must not exist, so 404
-    //         return res.status(404).end();
-    //     } else {
-    //         res.status(200).end();
-    //     }
-    // });
+    console.log(req.body.likes);
+    db.Spot.update({
+        likes: req.body.likes
+    }, { where: { id: req.params.id } }, function (result) {
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            console.log("Inserted");
+            res.status(200).end();
+        }
+    });
 });
 
 
