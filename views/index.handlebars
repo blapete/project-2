@@ -1,56 +1,56 @@
 <main>
-<script src="https://kit.fontawesome.com/7329a5fd47.js" crossorigin="anonymous"></script>
-<div class="nav-bar">
+    <script src="https://kit.fontawesome.com/7329a5fd47.js" crossorigin="anonymous"></script>
+    <div class="nav-bar">
 
-<h1><img src="public/assets/images/localspot-02.png" id="logo"> LocalSpot</h1>
-<h6><a href="/favorites">Favorite Spots</a></h6>
-</div>
-<div class="container">
-{{#each spots}}
-<div class="row">
-<div class="col s12 spot-div">
-<span class="icon-thumb"><i data-id={{this.id}} data-likes={{this.likes}} class="thumb thumb-color far fa-thumbs-up fa-2x"><br><span style="font-size: small;">Like</span></i></span>
-<h3>{{this.name}}</h3>
-<p class="div-desc">{{this.alias}}</p>
-<hr>
-<div class="row">
-<div class="col s12 m3">
+        <h1><img src="public/assets/images/localspot-02.png" id="logo"> LocalSpot</h1>
+        {{!-- <h6><a href="/favorites">Favorite Spots</a></h6> --}}
+    </div>
+    <div class="container">
+        {{#each spots}}
+        <div class="row">
+            <div class="col s12 spot-div">
+                <span class="icon-thumb"><i data-id={{this.id}} data-likes={{this.likes}}
+                        class="thumb thumb-color far fa-thumbs-up fa-2x"><br><span
+                            style="font-size: small;" class="like-icon-label">Like</span></i></span>
+                <h3>{{this.name}}</h3>
+                <p class="div-desc">{{this.alias}}</p>
+                <hr>
+                <div class="row">
+                    <div class="col s12 m8">
+                        <img src={{this.image}} class="place-holder-pic">
+                    </div>
 
-    <img src= {{this.image}} class="place-holder-pic">
+                    <div class="col s12 m3">
+                        {{!-- <h5 class="spot-name">{{this}}</h5> --}}
+                        {{!-- <p class="spot-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
+                            voluptatem necessitatibus est beatae totam. Voluptatem in amet velit placeat facilis alias
+                            odio! Error dolores saepe voluptatum doloribus excepturi, similique blanditiis?</p> --}}
+                        <p id="spot-info">Address: <span class="spot-address">{{this.address}}</span> <br>Yelp Rating: <span
+                                class="rating">{{this.rating}}</span> Stars <br> LocalSpot Likes: <span data-id={{this.likes}}>{{this.likes}}</span></p>
+                        {{!-- <button class="add-favorite" data-id="">add favorite</button> --}}
+                        <p class="likes-amount"></p>
 
-<!--CHANGE TO IMG TAG LATER WITH CLASS "yelp-pic".-->
-</div>
+                    </div>
 
-<div class="col s12 m8">
-<h5 class="spot-name">{{this}}</h5>
-<p class="spot-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error
-    voluptatem necessitatibus est beatae totam. Voluptatem in amet velit placeat facilis alias
-    odio! Error dolores saepe voluptatum doloribus excepturi, similique blanditiis?</p>
-<p><span class="spot-address">{{this.address}}</span> || Yelp Rating: <span class="rating">{{this.rating}}</span> Stars</p>
-<button class="add-favorite" data-id="">add favorite</button>
-<p class="likes-amount">Likes: <span data-id={{this.likes}}>{{this.likes}}</span></p>
+                </div>
 
-</div>
-
-</div>
-<hr>
-
-</div>
-</div>
-{{/each}}
+            </div>
+        </div>
+        {{/each}}
 
 </main>
 <footer>
-<p>copyright PCC</p>
+    <p>copyright PCC</p>
 </footer>
 <script type="text/javascript">
 
- $(".thumb").on("click", function (event) {
+    $(".thumb").on("click", function (event) {
         event.preventDefault();
         let id = $(this).data("id");
         let newLike = $(this).data("likes");
         let convert = parseInt(newLike);
         let newLikeInsert = convert + 1;
+
         
         let newLikeAmount ={likes: newLikeInsert}
 
@@ -59,6 +59,7 @@
         data: newLikeAmount,
         }).then(function(data) {
         location.reload();
+
         });
     });
 </script>
