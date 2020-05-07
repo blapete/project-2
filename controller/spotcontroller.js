@@ -19,7 +19,8 @@ orm = {
       };
       return spotsArr;
     });
-  }
+  },
+
 };
 
 module.exports = orm;

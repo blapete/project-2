@@ -49,12 +49,20 @@
         event.preventDefault();
         let id = $(this).data("id");
         alert(id);
-        let newlike = $(this).data("likes");
-        alert (newlike);
+        let newLike = $(this).data("likes");
+        alert(newLike);
+        let convert = parseInt(newLike);
+        let newLikeInsert = convert + 1;
+        alert(newLikeInsert);
+         let newLikeAmount = {likes: newLikeInsert};
 
-         let newLikeAmount = 
-         {
-         likes: 1
-         };
- });
+        $.ajax("/api/likes/" + id, {
+        type: "PUT",
+        data: newLikeInsert;
+        }).then(function() {
+
+        alert("it worked");
+         //location.reload();
+        });
+    });
 </script>
