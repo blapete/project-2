@@ -1,20 +1,23 @@
 $(document).ready(function () {
+    console.log("hello");
 
-    var nameInput = $("#spot_name");
-    var imageInput = $("#image");
-    var ratingInput = $("#rating");
-    var aliasInput = $("#alias");
-    var addressInput = $("#address");
+    
 
 
     $(document).on("submit", "#add-spot", handleSpotFormSubmit);
 
 
     function handleSpotFormSubmit(event) {
+        var nameInput = $("#spot_name").val();
+        var imageInput = $("#image").val();
+        var ratingInput = $("#rating").val();
+        var aliasInput = $("#alias").val();
+        var addressInput = $("#address").val();
         event.preventDefault();
-        console.log("hello");
+        
         // Don't do anything if the name fields hasn't been filled out
-        if (!nameInput || !imageInput || !ratingInput || !aliasInput || addressInput) {
+        if (!nameInput || !imageInput || !ratingInput || !aliasInput || !addressInput) {
+            console.log("hi in statement");
             return;
         }
         // Calling the Insert function and passing in the value of the name input
@@ -28,7 +31,10 @@ $(document).ready(function () {
     }
 
     function insertSpot(spotData) {
-        $.post("/api/admit312", spotData)
+        console.log("Insert Spot");
+        $.post("/api/admin312", spotData, function(){ console.log('in this thing')}).then(function (data){
+            console.log('in this other')
+        })
     }
 
     // app.post("/api/admin312", function (req, res) {
@@ -40,14 +46,4 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-})
+});
