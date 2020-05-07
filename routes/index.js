@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const spotControl = require('../controller/spotcontroller');
 const db = require("../models");
-const admin = require('../views/admin-routes/admin');
 
 
 router.get('/', function (req, res) {
