@@ -1,13 +1,8 @@
 body {
   font-family: "Comfortaa", sans-serif;
   color: #cae0e8;
-  background: rgb(34, 34, 34);
-  background: linear-gradient(
-    180deg,
-    rgba(34, 34, 34, 1) 15%,
-    rgba(43, 77, 94, 1) 52%,
-    rgba(149, 100, 118, 1) 100%
-  );
+  background: rgb(34,34,34);
+  background: linear-gradient(180deg, rgba(34,34,34,1) 0%, rgba(43,77,94,1) 50%, rgba(149,100,118,1) 100%);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -37,28 +32,41 @@ h1 {
 h3 {
   font-size: 30px;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .nav-bar {
-  background-color: #222222;
+  background: rgb(43,43,43);
+  background: linear-gradient(183deg, rgba(43,43,43,1) 0%, rgba(34,34,34,1) 100%);
   padding: 10px 40px;
   border-bottom: 4px solid #2b4d5e;
   margin-bottom: 10px;
 }
 
 .spot-div {
-  background-color: #222222;
+  background: rgb(34,34,34);
+  background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(42,46,47,1) 100%);
   border-radius: 10px;
   border: 2px solid #cae0e8;
   margin-top: 15px;
   height: 20%;
   padding: 20px;
+  -webkit-box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
+  -moz-box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
+  box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
 }
 
 .place-holder-pic {
-  height: 200px;
-  width: 200px;
+  object-fit: cover;
+  width: 90%;
+  height: 300px;
   margin: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
+  -moz-box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
+  box-shadow: 10px 10px 75px 3px rgba(20,20,20,1);
+
+
 }
 
 .add-favorite,
@@ -95,6 +103,7 @@ h3 {
 
 .div-desc {
   text-align: center;
+  margin-top: 2px;
 }
 
 footer {
@@ -117,4 +126,30 @@ footer {
 
 .likes-amount {
   text-align: right;
+}
+
+.like-icon-label {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.like-button-div {
+  display: inline-block;
+  text-align: right;
+}
+
+#spot-info {
+  margin-top: 50%;
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .spot-div {
+    text-align: center;
+  }
+  #spot-info {
+    margin-top: 5%;
+  }
 }
