@@ -9,7 +9,7 @@
 {{#each spots}}
 <div class="row">
 <div class="col s12 spot-div">
-<span class="icon-thumb"><i data-id={{this.id}} class="thumb thumb-color far fa-thumbs-up fa-2x"><br><span style="font-size: small;">Like</span></i></span>
+<span class="icon-thumb"><i data-id={{this.id}} data-likes={{this.likes}} class="thumb thumb-color far fa-thumbs-up fa-2x"><br><span style="font-size: small;">Like</span></i></span>
 <h3>{{this.name}}</h3>
 <p class="div-desc">{{this.alias}}</p>
 <hr>
@@ -28,7 +28,7 @@
     odio! Error dolores saepe voluptatum doloribus excepturi, similique blanditiis?</p>
 <p><span class="spot-address">{{this.address}}</span> || Yelp Rating: <span class="rating">{{this.rating}}</span> Stars</p>
 <button class="add-favorite" data-id="">add favorite</button>
-<p class="likes-amount">Likes: {{this.likes}}</p>
+<p class="likes-amount">Likes: <span data-id={{this.likes}}>{{this.likes}}</span></p>
 
 </div>
 
@@ -49,17 +49,12 @@
         event.preventDefault();
         let id = $(this).data("id");
         alert(id);
+        let newlike = $(this).data("likes");
+        alert (newlike);
 
-
-     $.ajax("/api/likes/" + id, {
-      type: "PUT",
-      data: newSleepState
-    }).then(
-      function() {
-        console.log("changed sleep to", newSleep);
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
+         let newLikeAmount = 
+         {
+         likes: 1
+         };
  });
 </script>
