@@ -18,7 +18,7 @@ async function enterYelps(spot_name) {
         })
     })
 };
-const spotArray = []
+const spotArray = ["The Purple Pig"]
 async function yelpers() {
     for (var i = 0; i < spotArray.length; i++) {
         await enterYelps(spotArray[i])
