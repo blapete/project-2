@@ -57,9 +57,8 @@
         $.ajax("/api/likes/" + id, {
         type: "PUT",
         data: newLikeAmount,
-        }).then(function() {
-
-        location.reload()
+        }).then(function(data) {
+        location.reload();
         });
     });
 </script>
