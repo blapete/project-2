@@ -5,17 +5,18 @@ $(document).ready(function () {
 
 
 
-    $(document).on("submit", "#add-spot", handleSpotFormSubmit);
+    $(document).on("click", "#add-button", handleSpotFormSubmit);
 
 
     function handleSpotFormSubmit(event) {
+        event.preventDefault();
         var nameInput = $("#spot_name").val();
         var imageInput = $("#image").val();
         var ratingInput = $("#rating").val();
         var aliasInput = $("#alias").val();
         var addressInput = $("#address").val();
         var likesInput = $("#likes").val();
-        event.preventDefault();
+
 
         // Don't do anything if the name fields hasn't been filled out
         if (!nameInput || !imageInput || !ratingInput || !aliasInput || !addressInput) {
@@ -29,14 +30,14 @@ $(document).ready(function () {
             rating: ratingInput,
             alias: aliasInput,
             address: addressInput,
-            likes : likesInput
+            likes: likesInput
         });
     }
 
     function insertSpot(spotData) {
         console.log("Insert Spot");
-        $.post("/api/admin312", spotData, function () { console.log('in this thing') }).then(function (data) {
-            console.log('in this other')
+        $.post("/api/admin312", spotData, function (data) {
+            location.reload();
         })
     }
 
