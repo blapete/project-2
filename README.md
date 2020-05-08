@@ -1,5 +1,11 @@
+<p align="center">
+  <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/localspot-04.png?raw=true">
+</p>
+
+<p align="center">
 ![Build passing badge](https://img.shields.io/badge/build-passing-brightgreen) ![Deployment badge](https://img.shields.io/badge/deployment-passing-brightgreen)
 ![Contributors badge](https://img.shields.io/badge/Contributors-3-blue)
+  </p>
 
 # Northwestern Coding Bootcamp Project 2: LocalSpot
 
