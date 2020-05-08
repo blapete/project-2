@@ -20,9 +20,9 @@ Check out LocalSpot at https://agile-journey-25400.herokuapp.com/ and drop a lik
 
 ### Table of Contents
 
-[Usage](#usage)
-[Contributing](#contributing)
-[Questions](#questions)
+[Usage](#usage) <br>
+[Contributing](#contributing) <br>
+[Heroku Link](#heroku)
 
 
 ### Usage
@@ -43,27 +43,21 @@ Admins with the *super secret* link can add their own LocalSpots to the database
 
 2b. After entering all of the input info, the admin can then click on the submit button and see the new LocalSpot appear at the bottom of the LocalSpots list.
 
-<p align="center">
-  <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/demo1.png?raw=true>
-  <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/demo2.png?raw=true>
-</p>
+
 
 ### Contributing
 
-![GitHub Profile Picture](https://avatars0.githubusercontent.com/u/59776440?s=460&u=c82032205bde8afe04fe8c59d00a7a7f4acf647e&v=4)
 
 #### Peter Blank https://github.com/blapete
 
-![GitHub Profile Picture](https://avatars1.githubusercontent.com/u/59744231?s=460&u=9bfb37ce20b387113812deecd35083ffc6756e15&v=4)
 
 #### CJ Palmerin https://github.com/cjpalmerin
 
-![GitHub Profile Picture](https://avatars2.githubusercontent.com/u/62187731?s=460&u=598279933eb21c4cfc6af76f37226d137ea12e0e&v=4)
 
 #### Chris Bruder https://github.com/cbruder1292
 
 
-### Heroku Link
+### Heroku
 
 #### https://agile-journey-25400.herokuapp.com/
 
