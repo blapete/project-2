@@ -1,5 +1,5 @@
-https://img.shields.io/badge/build-passing-brightgreen https://img.shields.io/badge/deployment-passing-brightgreen 
-https://img.shields.io/badge/Contributors-3-blue
+![Build passing badge](https://img.shields.io/badge/build-passing-brightgreen) ![Deployment badge](https://img.shields.io/badge/deployment-passing-brightgreen)
+![Contributors badge](https://img.shields.io/badge/Contributors-3-blue)
 
 # Northwestern Coding Bootcamp Project 2: LocalSpot
 
@@ -34,10 +34,6 @@ Admins with the *super secret* link can add their own LocalSpots to the database
 1b. WHen presented a link, an admin can visit it and add a new LocalSpot to the data base.
 
 2b. After entering all of the input info, the admin can then click on the submit button and see the new LocalSpot appear at the bottom of the LocalSpots list.
-
-
-
-![Demo Pic](https://github.com/cjpalmerin/Homework-8/blob/master/Homework-8-DEMO.gif?raw=true)
 
 
 ### License
