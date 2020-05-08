@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/build-passing-brightgreen">
   <img src="https://img.shields.io/badge/deployment-passing-brightgreen">
   <img src="https://img.shields.io/badge/contributors-3-blue">
+  <img src="https://img.shields.io/badge/license-ISC-blue">
 </p>
 
 
@@ -20,7 +21,6 @@ Check out LocalSpot at https://agile-journey-25400.herokuapp.com/ and drop a lik
 ### Table of Contents
 
 [Usage](#usage)
-[License](#license)
 [Contributing](#contributing)
 [Questions](#questions)
 
@@ -47,10 +47,6 @@ Admins with the *super secret* link can add their own LocalSpots to the database
   <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/demo1.png?raw=true>
   <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/demo2.png?raw=true>
 </p>
-
-### License
-
-![License badge](https://img.shields.io/badge/license-ISC-blue)
 
 ### Contributing
 
