@@ -5,7 +5,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/build-passing-brightgreen">
   <img src="https://img.shields.io/badge/deployment-passing-brightgreen">
-  <img src="https://https://img.shields.io/badge/Contributors-3-blue">
+  <img src="https://img.shields.io/badge/contributors-3-blue">
 </p>
 
 
@@ -43,6 +43,10 @@ Admins with the *super secret* link can add their own LocalSpots to the database
 
 2b. After entering all of the input info, the admin can then click on the submit button and see the new LocalSpot appear at the bottom of the LocalSpots list.
 
+<p align="center">
+  <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/demo1.png?raw=true>
+  <img width="460"" src="https://github.com/blapete/project-2/blob/master/public/assets/images/demo2.png?raw=true>
+</p>
 
 ### License
 
